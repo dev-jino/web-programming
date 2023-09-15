@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid green;
+        }
+        span {
+            display: block;
+            width: 150px;
+            height: 50px;
+            margin: 10px;
+            border: 1px solid red;
+            background-color: yellow;
+        }
+        #inline {
+            display: inline;
+            margin: 20px;
+            width: 150px;
+            height: 50px;
+            /* inline은 width와 height, margin-top과 margin-bottom에 대해 조절 불가능 */
+        }
+        .inline-block {
+            display: inline-block;
+            margin: 20px;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>div <span>span</span> 과 <span>span</span></div>
+    <div>
+        div<div id="inline">inline-div</div>입니다.
+    </div>
+    <div>
+        div<div class="inline-block">inline-block-div</div> 과 
+        <div class="inline-block">inline-block-div</div> 입니다.
+    </div>
+</body>
+</html>

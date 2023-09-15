@@ -30,3 +30,15 @@ tr:hover {
 tr:nth-child(even) {
     background-color: white;
 }
+tr:nth-child(even):hover {
+    background-color: aqua;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+
+th, td {
+    border: 1px dotted green;
+}
