@@ -1,0 +1,32 @@
+/* * {
+    background-color: darkgray;
+} */
+.main {
+    background-color: linen;
+}
+body {
+    background-color: azure;
+}
+div > .main {
+    background-color: red;
+}
+body .main {
+    background-color: green;
+}
+div strong {
+    color: dodgerblue;
+}
+ol, ul {
+    color: tomato;
+    border: 2px solid blue;
+    /* border-color: blue; */
+}
+li:hover {
+    background-color: yellow;
+}
+tr:hover {
+    background-color: linen;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
