@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 정보 입력</title>
+</head>
+<body>
+    <h1>학생 정보 입력</h1>
+    <form action="studentForm.html">
+        <label for="name">이름 : </label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요." required>
+        <p>
+            성별 : 
+            <input type="radio" id="male" name="gender" value="M">
+            <label for="male">남성</label>
+            <input type="radio" id="female" name="gender" value="M">
+            <label for="female">여성</label>
+        </p>
+        <p>
+            <label for="age">나이 : </label>
+            <input type="number" id="age" name="age" value=0 min="0" max="99">
+        </p>
+        <p>
+            <label for="phone">전화번호 : </label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="전화번호를 입력하세요.">
+        </p>
+        <p>
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email">
+        </p>
+        <p>
+            관심언어
+        </p>
+        <p>
+            <input type="checkbox" id="c" name="fav_language1" value="1">
+            <label for="c">c</label>
+            <input type="checkbox" id="cpp" name="fav_language2" value="2">
+            <label for="cpp">cpp</label>
+            <input type="checkbox" id="c#" name="fav_language3" value="3">
+            <label for="c#">c#</label>
+            <input type="checkbox" id="java" name="fav_language4" value="4">
+            <label for="java">java</label>
+            <input type="checkbox" id="javascript" name="fav_language5" value="5">
+            <label for="javascript">javascript</label>
+            <input type="checkbox" id="python" name="fav_language6" value="6">
+            <label for="python">python</label>
+        </p>
+        <p>
+            <label for="fav_food">좋아하는 음식 : </label>
+            <select id="fav_food" name="fav_food">
+                <option value="" selected disabled>==선 택==</option>
+                <option value="1">한식</option>
+                <option value="2">일식</option>
+                <option value="3">양식</option>
+                <option value="4">중식</option>
+            </select>
+        </p>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
