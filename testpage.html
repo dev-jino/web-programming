@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: repeat(3, 100px); */
+            grid-template-rows: 1fr, 10fr, 1fr;
+            grid-template-areas: 
+                "header header header"
+                "nav main main"
+                "footer footer footer"
+            ;
+        }
+
+        .header{
+            border: 1px solid black;
+            grid-area: header;
+        }
+        .nav{
+            border: 1px solid red;
+            grid-area: nav;
+        }
+        .main{
+            border: 1px solid blue;
+            grid-area: main;
+        }
+        .footer{
+            border: 1px solid green;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header class="header">
+            <h1>TEST PAGE</h1>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">TEST1</a></li>
+                <li><a href="">TEST2</a></li>
+                <li><a href="">TEST3</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            main
+        </main>
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
+</body>
+</html>
