@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+</head>
+<body>
+    <h3>new Object()와 리터럴로 사용자 객체 만들기</h3>
+    <hr>
+    <script>
+        // new Object()로 객체 만들기
+        let inquiry = function () {
+            return "계좌잔액 조회";
+        }
+        let withdraw = function () {
+            return "출금";
+        }
+        let deposit = function () {
+            return "입금";
+        }
+        
+        let account = new Object();
+        account.code = "111";
+        account.owner = "홍길동";
+        account.balance = 35000;
+        account.inquiry = inquiry;
+        account.withdraw = withdraw;
+        account.deposit = deposit;
+
+        document.write(account.owner + "의 계좌 <br>");
+        document.write("잔액 : " + account.inquiry() + "<br>");
+        document.write("<br>");
+
+
+        // 리터럴로 객체 만들기(json)
+        let account2 = {
+            code : "111",
+            owner : "홍길동",
+            balance : 35000,
+            inquiry : function () {return "계좌잔액 조회";},
+            withdraw : function () {return "출금";},
+            deposit : function () {return "입금";}
+        }
+
+        document.write(account2.owner + "의 계좌 <br>");
+        document.write("잔액 : " + account2.inquiry() + "<br>");
+        document.write("<br>");
+
+
+        // 프로토 타입으로 객체 만들기
+        function Account3(owner) {
+            this.code = "111";
+            this.owner = owner;
+            this.balance = 0;
+            this.inquiry = function () {
+                return this.balance;
+            }
+            this.withdraw = function (money) {
+                return this.balance -= money;
+            }
+            this.deposit = function (money) {
+                return this.balance += money;
+            }
+        }
+
+        let cus1 = new Account3("홍길동");
+        let cus2 = new Account3("임꺽정");
+        document.write(cus1.owner + "의 잔액 : " + cus1.balance + "원<br>");
+        document.write(cus1.owner + "님이 " + 5000 + "원 입금하셨습니다. <br> 잔액 : " + cus1.deposit(5000) + "원 <br>");
+        document.write(cus1.owner + "님이 " + 3000 + "원 출금하셨습니다. <br> 잔액 : " + cus1.withdraw(3000) + "원 <br>");
+        document.write("<br>");
+        document.write(cus2.owner + "의 잔액 : " + cus2.balance + "원<br>");
+        document.write(cus2.owner + "님이 " + 10000 + "원 입금하셨습니다. <br> 잔액 : " + cus2.deposit(10000) + "원 <br>");
+        document.write(cus2.owner + "님이 " + 1234 + "원 출금하셨습니다. <br> 잔액 : " + cus2.withdraw(1234) + "원 <br>");
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 10px ~ 35px 까지 5씩 크기가 늘어나도록 document.write()로
+        // 10px 15px 20px 25px 30px (style = 'font-size : 10px')
+        for (let size = 10 ; size <= 35 ; size+=5) {
+            document.write("<span style = 'font-size : " + size + "px'>");
+            document.write(size + "px</span>");
+        }
+    </script>
+</body>
+</html>

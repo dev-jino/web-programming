@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function randomInt() {
+            let num;
+            num = Math.floor(Math.random() * 9 + 1);
+            return num;
+        }
+    </script>
+</head>
+<body>
+    <h3>구구단 연습하기</h3>
+    <hr>
+    <script>
+        let x = randomInt();
+        let y = randomInt();
+        let answer = x * y;
+        let str = x + " x " + y + "의 값은?";
+        let res = prompt(str);
+
+        if (res != null && !isNaN(res)) {
+            res = parseInt(res);
+            if (res == answer) {
+                document.write("정답");
+            } else {
+                document.write("오답");
+            }
+        } else {
+            document.write("숫자를 정확하게 입력해주세요.")
+        }
+        
+    </script>
+</body>
+</html>
