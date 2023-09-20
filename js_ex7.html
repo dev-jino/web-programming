@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function insertInfo() {
+            let name1 = document.getElementById("name1");
+            let phone1 = document.getElementById("phone1");
+            let address1 = document.getElementById("address1");
+
+            let name2 = document.getElementById("name2");
+            let phone2 = document.getElementById("phone2");
+            let address2 = document.getElementById("address2");
+
+            name2.value = name1.value;
+            phone2.value = phone1.value;
+            address2.value = address1.value;
+        }
+    </script>
+</head>
+<body>
+    <h3>주문/배송정보 등록</h3>
+    <hr>
+    <label for="name1">이 름 </label><input id="name1" type="text">
+    <label for="phone1">전화번호 </label><input id="phone1" type="text">
+    <label for="address1">주 소 </label><input id="address1" type="text">
+    <br>
+    <input type="checkbox" name="" id="" onclick="insertInfo()"> 같으면 체크
+    <br>
+    <label for="name2">이 름 </label><input id="name2" type="text">
+    <label for="phone2">전화번호 </label><input id="phone2" type="text">
+    <label for="address2">주 소 </label><input id="address2" type="text">
+</body>
+</html>

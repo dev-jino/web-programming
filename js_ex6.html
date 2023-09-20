@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addList(event) {
+            event.preventDefault();
+            let list = document.getElementById("list");
+            let newItem = document.createElement("li");
+            newItem.innerHTML = document.form.textarea.value
+                + "<br><button type='button' onclick='deleteDiv(this)'>삭제</button>";
+            list.appendChild(newItem);
+        }
+
+        function deleteDiv(obj) {
+            let item = obj.parentElement;
+            let list = item.parentElement;
+            list.removeChild(item);
+        }
+    </script>
+</head>
+<body>
+    <h3>리스트 동적 제어하기</h3>
+    <hr>
+    <form name="form" action="">
+        <textarea id="textarea" name="textarea" cols="30" rows="5" autofocus></textarea>
+        <br>
+        <button type="button" onclick="addList(event)">등록</button>
+    </form>
+    <hr>
+    <ul id="list"></ul>
+</body>
+</html>

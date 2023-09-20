@@ -45,10 +45,6 @@
             border: 1px solid green;
             grid-area: footer;
         } */
-        :root {
-            --color-main: #ff3b49;
-        }
-
         @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
         @import url("https://fonts.googleapis.com/css?family=Shrikhand&display=swap");
 
@@ -74,7 +70,7 @@
             min-height: 100vh;
             grid-row: span 2;
             color: #fff;
-            background-color: var(--color-main);
+            background-color: #ff3b49;
         }
 
         .logo {
@@ -82,6 +78,10 @@
             font-size: 27px;
             text-align: center;
             font-family: "Shrikhand";
+        }
+
+        .nav__container {
+            margin-bottom: 40px;
         }
 
         .nav_list {
@@ -99,7 +99,7 @@
             text-decoration: none;
         }
 
-        .nav_link::after {
+        .nav_link:after {
             position: absolute;
             top: 50%;
             left: 0;
@@ -112,7 +112,7 @@
             content: "";
         }
 
-        .nav_link:hover::after {
+        .nav_link:hover:after {
             width: 100%;
         }
 
@@ -133,17 +133,122 @@
         }
 
         .search_label {
-            display: inline-block;
+            display: none;
         }
 
         .search_input {
-            display: inline-block;
+            display: block;
             width: 100%;
             height: 100%;
             padding: 8px 10px;
             font-size: 13px;
             border: 1px solid #d0d0d0;
         }
+
+        .search_input:focus, .search_input::hover {
+            outline: 0;
+            border-color: firebrick;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .profile_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            line-height: 44px;
+            font-size: 18px;
+            background-color: rgb(110, 90, 240);
+            font-family: "Shrikhand";
+        }
+
+        .main_header {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 30px;
+            background-image: url(img/jeju.jpg);
+            background-size: cover;
+        }
+
+        .main_header:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 10, 10, 0.6);
+            content: "";
+        }
+
+        .main_title {
+            z-index: 1;
+            position: relative;
+            color: #fff;
+        }
+
+        .listing_card {
+            max-width: 1600px;
+            margin: 30px auto 60px;
+            padding: 0 20px;
+        }
+
+        .listing_card_list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            grid-gap: 30px;
+        }
+
+        .listing_card_list_item {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+        }
+
+        .listing_card_list_img {
+            height: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 70%;
+        }
+
+        .listing_card_list_info {
+            margin: 20px 0 10px;
+        }
+
+        .listing_card_list_name {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
+
+        .listing_card_list_date {
+            color: #333;
+        }
+
+        /* .listing_card_list_img_container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        } */
+
+        /* .listing_card_list_img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 100%;
+        } */
+
     </style>
 </head>
 <body>
@@ -175,10 +280,10 @@
                 <h2 class="main_title">Test</h2>
             </div>
             <div class="main_body">
-                <div class="listing">
+                <div class="listing_card">
                     <ul class="listing_card_list">
                         <li class="listing_card_list_item">
-                            <div class="listing_card_list_img" style="background-image: url(img/cup-1.jpg);"></div>
+                            <div class="listing_card_list_img" style="background-image:url('img/cup-1.jpg');"></div>
                             <div class="listing_card_list_info">
                                 <strong class="listing_card_list_name">컵1</strong>
                                 <p class="listing_card_list_date">2023</p>
