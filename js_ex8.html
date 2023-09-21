@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+    <script>
+        function drawImage() {
+            let sel = document.form.cup;
+
+            console.log(sel);
+
+            document.form.img.src = sel.value;
+        }
+    </script>
+</head>
+<body>
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr>
+    <form name="form" action="">
+        <input type="radio" name="cup" onclick="drawImage()" value="img/cup-1.jpg">컵1
+        <input type="radio" name="cup" onclick="drawImage()" value="img/cup-2.jpg">컵2
+        <input type="radio" name="cup" onclick="drawImage()" value="img/cup-3.jpg">컵3
+        <br>
+        <img id="img" src="">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+    <script>
+        function login() {
+            let name = document.form.name.value;
+            alert(`${name} 님 반갑습니다.`)
+            return false;  // 이벤트의 디폴트 행동 취소
+        }
+    </script>
+</head>
+<body>
+    <h3>onsubmit</h3>
+    <hr>
+    <div>
+        이름과 학번을 입력하고 클릭 버튼을 누르세요.
+    </div>
+    <br>
+    <form name="form" action="" onsubmit="return login()">
+        <label for="name">이 름 </label><input type="text" name="name" required>
+        <br><br>
+        <label for="num">학 번 </label><input type="text" name="number" required>
+        <br><br>
+        <button type="submit">클 릭</button>
+    </form>
+</body>
+</html>
