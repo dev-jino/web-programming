@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
+}
+
+#favWrap {
+    background: url('../img/starbucks.jpg') fixed no-repeat;
+    width: 2000px;
+    height: 1000px;
+    position: absolute;
+}
+
+#favImg {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+}
+
+.fav-text {
+    color: white;
+    animation: slide-forward 2s ease-in-out;
+}
+
+.bg-text {
+    font-size: 9em;
+    font-weight: bold;
+    position: absolute;
+    left: 450px;
+    top: 100px;
+}
+
+.md-text {
+    font-size: 7em;
+    font-weight: bold;
+    position: absolute;
+    left: 450px;
+    top: 235px;
+}
+
+.sm-text {
+    font-size: 4.2em;
+    font-weight: bold;
+    position: absolute;
+    left: 450px;
+    top: 355px;
+}
+
+@keyframes slide-forward {
+    from {
+        left: -300px;
+        opacity: 0.1;
+    }
+    to {
+        left: 450px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-backward {
+    from {
+        left: 450px;
+        opacity: 0.1;
+    }
+    to {
+        left: -300px;
+        opacity: 1;
+    }
+}
